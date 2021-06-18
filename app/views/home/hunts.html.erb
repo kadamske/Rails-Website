@@ -7,42 +7,7 @@
                 </div>
                 <hr />
                 <div class="container">
-                    <div class="row mb-3 p-2 ">
-                        <div class="col-md-4 p-2">
-                            <select class="form-select" name="species" id="species">
-                                <option value="Species">Species</option>
-                                <option value="Antelope">Antelope</option>
-                                <option value="Bear">Bear</option>
-                                <option value="Bighorn">Bighorn</option>
-                                <option value="Elk">Elk</option>
-                            </select>
-                        </div>
-                        <div class="col-md-4 p-2">
-                            <select class="form-select" name="sex" id="sex">
-                                <option value="Sex">Sex</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                            </select>
-                        </div>
-                        <div class="col-md-4 p-2">
-                            <select class="form-select" name="unitGroup" id="unitGroup">
-                                <option value="Unit Group">Unit Group</option>
-                                <option value="001">001</option>
-                                <option value="002">002</option>
-                                <option value="003">003</option>
-                                <option value="004">004</option>
-                                <option value="005">005</option>
-
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mb-3 p-2">
-                        <div class="col offset-md-8">
-                            <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-primary" onclick="add()">Add Choice</button>
-                            </div>
-                        </div>
-                    </div>
+                    <%= render "form" %>
                 </div>
                 <hr />
                 <div>
@@ -64,57 +29,5 @@
             </div>
         </div>
     </div>
-    <script>
-        const defaultSpecies = "Species";
-        const defaultSex = "Sex";
-        const defaultUnitGroup = "Unit Group";
-        function removeRow(oButton) {
-            var table = document.getElementById('choices');
-            table.deleteRow(oButton.parentNode.parentNode.rowIndex);
-        }
-        function addRow(species, sex, unitGroup) {
-            var table = document.getElementById('choices');
-            var rowCnt = table.rows.length;
-            var tr = table.insertRow(rowCnt);
-            tr = table.insertRow(rowCnt);
-            var speciesCell = tr.insertCell(0);
-            speciesCell.innerHTML = species;
-            var sexCell = tr.insertCell(1);
-            sexCell.innerHTML = sex;
-            var unitGroupCell = tr.insertCell(2);
-            unitGroupCell.innerHTML = unitGroup;
-
-            var buttonCell = document.createElement('td');
-            buttonCell = tr.insertCell(3);
-            var button = document.createElement('button');
-            button.setAttribute('value', 'Remove');
-            button.setAttribute('class', 'btn btn-danger');
-            button.setAttribute('onclick', 'removeRow(this)');
-            button.innerHTML = "Remove"
-            buttonCell.appendChild(button);
-        }
-        function clearChoices() {
-            document.getElementById("species").value = defaultSpecies;
-            document.getElementById("sex").value = defaultSex;
-            document.getElementById("unitGroup").value = defaultUnitGroup;
-        }
-        function add() {
-            let species = document.getElementById("species").value;
-            let sex = document.getElementById("sex").value
-            let unitGroup = document.getElementById("unitGroup").value
-            if (species === defaultSpecies) {
-                alert("Please select a species!");
-            }
-            else if (sex === defaultSex) {
-                alert("Please select a sex!");
-            }
-            else if (unitGroup === defaultUnitGroup) {
-                alert("Please select a unit group!");
-            }
-            else {
-                addRow(species, sex, unitGroup);
-                clearChoices();
-            }
-        }
-    </script>
+    
 </body>

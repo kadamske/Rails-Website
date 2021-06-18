@@ -29,6 +29,8 @@ gem 'devise'
 
 gem 'bootstrap-sass'
 
+gem 'simple_form'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
