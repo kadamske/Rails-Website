@@ -5829,3 +5829,195 @@ Processing by HomeController#welcome as HTML
 Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 5386)
 
 
+Started GET "/sign_out" for ::1 at 2021-06-22 13:21:12 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms | Allocations: 2748)
+
+
+Started GET "/" for ::1 at 2021-06-22 13:21:12 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/_form.html.erb (Duration: 9.4ms | Allocations: 7524)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 7620)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 11363)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 11981)
+
+
+Started GET "/" for ::1 at 2021-06-22 13:22:09 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/_form.html.erb (Duration: 10.7ms | Allocations: 7519)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 7615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 11356)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 11968)
+
+
+Started GET "/" for ::1 at 2021-06-22 13:22:27 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/_form.html.erb (Duration: 22.7ms | Allocations: 7534)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.0ms | Allocations: 7630)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 11372)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms | Allocations: 11985)
+
+
+Started GET "/" for ::1 at 2021-06-22 13:23:03 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/_form.html.erb (Duration: 10.9ms | Allocations: 7737)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.4ms | Allocations: 8075)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 2.2ms | Allocations: 379)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 12428)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 14221)
+
+
+Started GET "/register" for ::1 at 2021-06-22 13:23:05 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/_form.html.erb (Duration: 12.3ms | Allocations: 8944)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 488)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 16.9ms | Allocations: 10863)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 130)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 14714)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.0ms | Allocations: 16569)
+
+
+Started GET "/login" for ::1 at 2021-06-22 13:23:06 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/_form.html.erb (Duration: 10.5ms | Allocations: 7527)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 7652)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 12027)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 12646)
+
+
+Started GET "/register" for ::1 at 2021-06-22 13:23:07 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/_form.html.erb (Duration: 12.5ms | Allocations: 8640)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 101)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 9422)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 13311)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 13903)
+
+
+Started GET "/" for ::1 at 2021-06-22 13:23:21 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/_form.html.erb (Duration: 10.3ms | Allocations: 7519)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 7615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 11356)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 11968)
+
+
+Started GET "/" for ::1 at 2021-06-22 13:23:23 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/_form.html.erb (Duration: 13.8ms | Allocations: 7519)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 7615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 11356)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 11968)
+
+
+Started GET "/register" for ::1 at 2021-06-22 13:23:29 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/_form.html.erb (Duration: 23.3ms | Allocations: 8651)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 101)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 24.0ms | Allocations: 8921)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 13226)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms | Allocations: 13830)
+
+
+Started POST "/" for ::1 at 2021-06-22 13:23:49 -0500
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"kara", "last_name"=>"adams", "email"=>"k@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mUser Create (3.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "kara"], ["last_name", "adams"], ["email", "k@gmail.com"], ["encrypted_password", "$2a$12$qdWMwLl5I0gj7RcSWeGhFeWs2FSPTaGSAETK5/dL8S9FrID5yI6Bm"], ["created_at", "2021-06-22 18:23:49.360197"], ["updated_at", "2021-06-22 18:23:49.360197"]]
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 220ms (ActiveRecord: 4.5ms | Allocations: 5715)
+
+
+Started GET "/welcome" for ::1 at 2021-06-22 13:23:49 -0500
+Processing by HomeController#welcome as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/welcome.html.erb within layouts/application
+  Rendered home/welcome.html.erb within layouts/application (Duration: 0.7ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3929)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 6093)
+
+
+Started GET "/hunts" for ::1 at 2021-06-22 13:23:53 -0500
+Processing by HomeController#hunts as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/hunts.html.erb within layouts/application
+  Rendered home/_form.html.erb (Duration: 1.2ms | Allocations: 774)
+  Rendered home/hunts.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1124)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5025)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 6704)
+
+
+Started GET "/sign_out" for ::1 at 2021-06-22 13:24:13 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1715)
+
+
+Started GET "/" for ::1 at 2021-06-22 13:24:13 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/_form.html.erb (Duration: 10.1ms | Allocations: 7537)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 7633)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 11381)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 12000)
+
+
