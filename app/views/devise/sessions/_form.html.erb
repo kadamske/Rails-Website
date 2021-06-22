@@ -1,0 +1,21 @@
+<%= simple_form_for @user, url: new_user_session_path do |f| %>
+
+    <%= f.error_notification %>
+
+    <div>
+      <%= f.input :email, input_html: { autofocus: true, autocomplete: 'email' } %>
+    </div>
+
+    <div>
+      <%= f.input :password, input_html: { autocomplete: 'current-password' } %>
+    </div>
+
+    <div>
+        <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+    </div>
+
+    <div>
+      <%= f.button :submit, 'Login',  class: "btn btn-primary w-100" %>
+    </div>
+
+  <% end %>
