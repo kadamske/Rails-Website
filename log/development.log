@@ -4355,3 +4355,248 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 5637)
 
 
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20210617161404)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar NOT NULL, "last_name" varchar NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210617161404"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-22 16:39:51.216636"], ["updated_at", "2021-06-22 16:39:51.216636"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/register" for ::1 at 2021-06-22 11:40:02 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/_form.html.erb (Duration: 111.2ms | Allocations: 21751)
+  Rendered devise/shared/_links.html.erb (Duration: 7.1ms | Allocations: 798)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 124.6ms | Allocations: 23846)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 381)
+  Rendered layout layouts/application.html.erb (Duration: 178.6ms | Allocations: 30325)
+Completed 200 OK in 246ms (Views: 197.0ms | ActiveRecord: 1.4ms | Allocations: 40771)
+
+
+Started POST "/" for ::1 at 2021-06-22 11:40:14 -0500
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"a", "last_name"=>"a", "email"=>"a@a.a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a.a"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "a"], ["last_name", "a"], ["email", "a@a.a"], ["encrypted_password", "$2a$12$/o8M5Isiz0ZGzh80QjHk0Or2Ipp2GJUewS8G78SVM1Y8Q9vOGWN.."], ["created_at", "2021-06-22 16:40:14.802797"], ["updated_at", "2021-06-22 16:40:14.802797"]]
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:14:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 265ms (ActiveRecord: 1.8ms | Allocations: 7764)
+
+
+Started GET "/welcome" for ::1 at 2021-06-22 11:40:14 -0500
+Processing by HomeController#welcome as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/welcome.html.erb within layouts/application
+  Rendered home/welcome.html.erb within layouts/application (Duration: 2.1ms | Allocations: 152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3970)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.2ms | Allocations: 6293)
+
+
+Started GET "/hunts" for ::1 at 2021-06-22 11:40:20 -0500
+Processing by HomeController#hunts as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/hunts.html.erb within layouts/application
+  Rendered home/_form.html.erb (Duration: 0.6ms | Allocations: 222)
+  Rendered home/hunts.html.erb within layouts/application (Duration: 2.1ms | Allocations: 570)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4392)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 6091)
+
+
+Started GET "/hunts" for ::1 at 2021-06-22 11:40:26 -0500
+Processing by HomeController#hunts as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/hunts.html.erb within layouts/application
+  Rendered home/_form.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered home/hunts.html.erb within layouts/application (Duration: 0.3ms | Allocations: 134)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3945)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.1ms | Allocations: 5526)
+
+
+Started GET "/hunts" for ::1 at 2021-06-22 11:44:48 -0500
+Processing by HomeController#hunts as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/hunts.html.erb within layouts/application
+  Rendered home/_form.html.erb (Duration: 0.8ms | Allocations: 219)
+  Rendered home/hunts.html.erb within layouts/application (Duration: 2.2ms | Allocations: 574)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 2.3ms | Allocations: 342)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 4992)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 0.1ms | Allocations: 7331)
+
+
+Started GET "/hunts" for ::1 at 2021-06-22 11:44:55 -0500
+Processing by HomeController#hunts as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/hunts.html.erb within layouts/application
+  Rendered home/_form.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered home/hunts.html.erb within layouts/application (Duration: 0.3ms | Allocations: 134)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3950)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 5530)
+
+
+Started GET "/welcome" for ::1 at 2021-06-22 11:44:57 -0500
+Processing by HomeController#welcome as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/welcome.html.erb within layouts/application
+  Rendered home/welcome.html.erb within layouts/application (Duration: 0.8ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3962)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 5642)
+
+
+Started GET "/sign_out" for ::1 at 2021-06-22 11:44:59 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2010)
+
+
+Started GET "/" for ::1 at 2021-06-22 11:44:59 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/_form.html.erb (Duration: 16.3ms | Allocations: 8019)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.3ms | Allocations: 8353)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 12138)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms | Allocations: 13717)
+
+
+Started POST "/login" for ::1 at 2021-06-22 11:45:44 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"a@a.a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "a@a.a"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 226ms (ActiveRecord: 0.2ms | Allocations: 5408)
+
+
+Started GET "/welcome" for ::1 at 2021-06-22 11:45:44 -0500
+Processing by HomeController#welcome as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/welcome.html.erb within layouts/application
+  Rendered home/welcome.html.erb within layouts/application (Duration: 0.7ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 2.7ms | Allocations: 326)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 4551)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.1ms | Allocations: 6831)
+
+
+Started GET "/hunts" for ::1 at 2021-06-22 11:46:50 -0500
+Processing by HomeController#hunts as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/hunts.html.erb within layouts/application
+  Rendered home/_form.html.erb (Duration: 1.5ms | Allocations: 219)
+  Rendered home/hunts.html.erb within layouts/application (Duration: 3.4ms | Allocations: 568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 4390)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.2ms | Allocations: 6068)
+
+
+Started GET "/sign_out" for ::1 at 2021-06-22 11:47:18 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1715)
+
+
+Started GET "/" for ::1 at 2021-06-22 11:47:18 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/_form.html.erb (Duration: 9.5ms | Allocations: 7741)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 8070)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 11853)
+Completed 200 OK in 34ms (Views: 33.8ms | ActiveRecord: 0.0ms | Allocations: 13281)
+
+
+Started GET "/register" for ::1 at 2021-06-22 11:47:19 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/_form.html.erb (Duration: 12.7ms | Allocations: 8927)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 489)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 17.0ms | Allocations: 10312)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 14100)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms | Allocations: 15959)
+
+
+Started GET "/login" for ::1 at 2021-06-22 11:47:21 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/_form.html.erb (Duration: 10.0ms | Allocations: 7533)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 7630)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 11413)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 12032)
+
+
+Started GET "/welcome" for ::1 at 2021-06-22 11:47:23 -0500
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 238)
+
+
+Started GET "/login" for ::1 at 2021-06-22 11:47:23 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/_form.html.erb (Duration: 11.2ms | Allocations: 7520)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 7617)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 11397)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 12028)
+
+
